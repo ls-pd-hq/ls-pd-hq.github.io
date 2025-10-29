@@ -442,23 +442,35 @@
     }
 
     // Функция для форматирования участников в BB-код
-    function formatParticipantsTable() {
-      const participants = getParticipantsData();
-      let result = '';
-      
-      // Всегда выводим минимум 4 строки
-      const rowCount = Math.max(participants.codes.length, 4);
-      
-      for (let i = 0; i < rowCount; i++) {
-        const code = participants.codes[i] || 'С';
-        const name = participants.names[i] || 'N/A';
-        const contact = participants.contacts[i] || 'N/A';
-        
-        result += `[tr][td]${code}[/td][td]${name}[/td][td]${contact}[/td][/tr]\n`;
-      }
-      
-      return result;
+function formatParticipantsTable() {
+  const participants = getParticipantsData();
+  let result = '';
+  
+  // Выводим только заполненные строки
+  const rowCount = participants.codes.length;
+  
+  for (let i = 0; i < rowCount; i++) {
+    const code = participants.codes[i] || 'С';
+    const name = participants.names[i] || 'N/A';
+    const contact = participants.contacts[i] || 'N/A';
+    
+    // Пропускаем пустые строки (где только код по умолчанию)
+    if (code === 'С' && name === 'N/A' && contact === 'N/A') {
+      continue;
     }
+    
+    result += `[tr][td]${code}[/td][td]${name}[/td][td]${contact}[/td][/tr]\n`;
+  }
+  
+  // Если нет участников, добавляем 4 пустые строки
+  if (result === '') {
+    for (let i = 0; i < 4; i++) {
+      result += `[tr][td]С[/td][td]N/A[/td][td]N/A[/td][/tr]\n`;
+    }
+  }
+  
+  return result;
+}
 
     return `[textarea][head]Lucius Bertram[/head]
 
