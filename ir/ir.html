@@ -66,6 +66,118 @@
         box-shadow:0 6px 20px rgba(2,6,23,0.06);}
   h1{margin:0 0 8px;font-size:20px;text-align:center;position:relative;}
   
+  /* Мобильная адаптация */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+  
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .card {
+    padding: 12px;
+  }
+  
+  h1 {
+    font-size: 18px;
+  }
+  
+  /* Адаптация вкладок */
+  .tabs {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  
+  .tab {
+    flex: 1 0 45%;
+    font-size: 12px;
+    padding: 10px 4px;
+  }
+  
+  /* Адаптация таблицы участников */
+  .participants-table {
+    font-size: 11px;
+  }
+  
+  .participants-table th,
+  .participants-table td {
+    padding: 6px 4px;
+  }
+  
+  .participants-table select,
+  .participants-table input {
+    padding: 4px;
+    font-size: 11px;
+  }
+  
+  /* Адаптация кнопок */
+  .flex {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Адаптация навигации между вкладками */
+  .tab-navigation {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Адаптация текстовых полей */
+  input, textarea, select {
+    padding: 12px;
+    font-size: 16px; /* Убирает zoom на iOS */
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  /* Адаптация уведомлений */
+  .notification {
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .tab {
+    flex: 1 0 100%;
+    font-size: 11px;
+  }
+  
+  .participants-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .theme-toggle {
+    position: static;
+    align-self: flex-end;
+  }
+}
+
   /* Стили вкладок */
   .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid rgba(0,0,0,0.1);}
   .tab{flex:1;text-align:center;padding:12px 8px;background:transparent;border:none;
