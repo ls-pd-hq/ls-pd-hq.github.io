@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LSPD INCIDENT REPORT</title>
+<!-- ЗАМЕНИТЕ ЭТУ ССЫЛКУ НА ВАШУ ИКОНКУ -->
+<link rel="icon" href="data:image/png;base64,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" type="png">
+<style>
+  :root{
+    --bg:#f6f8fb;--card:#fff;--text:#0f1724;--muted:#556;--accent:#1f6feb;
+  }
+  [data-theme="dark"]{
+    --bg:#0b1116;--card:#071016;--text:#e6eef8;--muted:#9fb0cf;--accent:#60a5fa;
+  }
+  [data-theme="dark"] select{
+  background: var(--card);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] select option{
+  background: var(--card);
+  color: var(--text);
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes countdown {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: slideIn 0.3s ease-out;
+  min-width: 200px;
+}
+
+.notification-timer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.7);
+  width: 100%;
+  animation: countdown 5s linear;
+  border-radius: 0 0 8px 8px;
+}
+  *{box-sizing:border-box}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue";
+       background:var(--bg);color:var(--text);margin:0;padding:24px;}
+  .wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:18px;}
+  .card{background:var(--card);padding:18px;border-radius:12px;
+        box-shadow:0 6px 20px rgba(2,6,23,0.06);}
+  h1{margin:0 0 8px;font-size:20px;text-align:center;position:relative;}
+  
+  /* Стили вкладок */
+  .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid rgba(0,0,0,0.1);}
+  .tab{flex:1;text-align:center;padding:12px 8px;background:transparent;border:none;
+       color:var(--muted);cursor:pointer;font-size:14px;font-weight:500;
+       border-radius:8px 8px 0 0;transition:all 0.3s ease;}
+  .tab:hover{background:rgba(0,0,0,0.05);color:var(--text);}
+  .tab.active{background:var(--accent);color:#fff;}
+  
+  /* Стили для подсказок */
+.form-hint {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  cursor: help;
+}
+
+.form-hint::after {
+  content: '?';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1000;
+  margin-bottom: 5px;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--text);
+}
+
+.form-hint:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+  /* Секции формы */
+  .tab-content{display:none;}
+  .tab-content.active{display:block;}
+  
+  label{display:block;margin:10px 0 4px;color:var(--muted);font-size:13px;}
+  input,textarea,select{width:100%;padding:10px;border-radius:8px;
+                 border:1px solid rgba(0,0,0,0.08);background:transparent;
+                 color:var(--text);}
+  textarea{min-height:120px;resize:vertical;}
+  .btn{padding:8px 12px;border:none;border-radius:8px;cursor:pointer;
+       background:var(--accent);color:#fff;}
+  .btn.secondary{background:transparent;color:var(--accent);
+                 border:1px solid rgba(0,0,0,0.06);}
+  .flex{display:flex;gap:8px;align-items:center;}
+  .controls{display:flex;justify-content:center;align-items:center;position:relative;}
+  .preview{white-space:pre-wrap;background:linear-gradient(180deg,
+          rgba(0,0,0,0.02),transparent);padding:10px;border-radius:8px;
+          border:1px dashed rgba(0,0,0,0.05);min-height:120px;}
+  
+  /* Навигация между вкладками */
+  .tab-navigation{display:flex;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.1);}
+  .nav-btn{padding:8px 16px;border:1px solid var(--accent);background:transparent;
+           color:var(--accent);border-radius:6px;cursor:pointer;transition:all 0.2s;}
+  .nav-btn:hover{background:var(--accent);color:#fff;}
+  .nav-btn:disabled{opacity:0.5;cursor:not-allowed;}
+  .nav-btn:disabled:hover{background:transparent;color:var(--accent);}
+  
+  /* Кнопка переключения темы */
+  .theme-toggle{background:transparent;border:1px solid var(--accent);color:var(--accent);
+                padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;
+                transition:all 0.2s;position:absolute;right:0;}
+  .theme-toggle:hover{background:var(--accent);color:#fff;}
+  
+  /* Стили для информационной вкладки */
+  .info-content{line-height:1.6;font-size:14px;}
+  .info-content p{margin-bottom:16px;}
+  .info-content ul{margin:0 0 16px 0;padding-left:20px;}
+  .info-content li{margin-bottom:8px;}
+  
+  /* Стили для таблицы участников */
+  .participants-table{width:100%;border-collapse:collapse;margin:10px 0;}
+  .participants-table th{background:rgba(0,0,0,0.03);padding:10px;text-align:left;font-size:12px;font-weight:600;color:var(--muted);border-bottom:1px solid rgba(0,0,0,0.1);}
+  .participants-table td{padding:8px;border-bottom:1px solid rgba(0,0,0,0.05);}
+  .participants-table select,.participants-table input{width:100%;padding:6px;border-radius:4px;border:1px solid rgba(0,0,0,0.1);font-size:12px;}
+  .add-participant-btn{background:transparent;border:1px dashed var(--accent);color:var(--accent);
+                      padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;margin-top:8px;}
+  .add-participant-btn:hover{background:var(--accent);color:#fff;}
+  
+  @media(max-width:900px){.wrap{grid-template-columns:1fr;}}
+  
+  /* Стили для кнопки удаления участника */
+.remove-participant-btn:hover {
+  color: #ff4444;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="controls">
+      <h1>LSPD INCIDENT REPORT</h1>
+      <button class="theme-toggle" id="themeToggle">Тёмная</button>
+    </div>
+
+    <!-- Вкладки -->
+    <div class="tabs">
+      <button class="tab" data-tab="info">Информация</button>
+      <button class="tab active" data-tab="main">Основная</button>
+      <button class="tab" data-tab="questions">Данные</button>
+      <button class="tab" data-tab="ooc">Материалы</button>
+    </div>
+
+    <form id="form">
+      <!-- Вкладка Информация -->
+      <div class="tab-content" id="tab-info">
+        <div class="info-content">
+          <p><strong>Добро пожаловать в генератор инцидент-репортов!</strong></p>
+          
+          <p>Инструмент поможет офицерам быстро и качественно оформить отчёт о происшествии в соответствии со стандартами департамента полиции города Лос-Сантос.</p>
+          
+          <p><strong>Как использовать:</strong></p>
+          <ul>
+            <li>Заполните все необходимые поля в соответствующих вкладках;</li>
+            <li>Переключайтесь между вкладками для ввода разных категорий информации;</li>
+            <li>После заполнения нажмите "Сгенерировать отчёт";</li>
+            <li>Скопируйте BB-код для размещения на форуме.</li>
+			<li>Вставьте полученный BB-код в созданную тему на форуме.</li>
+          </ul>
+          
+          <p><strong>Требования к отчёту:</strong></p>
+          <ul>
+            <li>Все поля обязательны для заполнения;</li>
+            <li>Указывайте точные дату, время и место происшествия;</li>
+            <li>Подробно описывайте все обстоятельства инцидента;</li>
+            <li>Прикрепляйте доказательства в секции "Материалы".</li>
+          </ul>
+          
+		  <ul>
+          <p><strong>Как узнать свой номер жетона?</strong></p>
+		  <li>Перейдите на форум <a href="https://es.bw-p.ru/lspd">es.bw-p.ru/lspd</a> и откройте свой личный профиль;</li>
+		  <li>В конце адресной строки вашего профиля будет тег viewprofile&u=, после которого следует число.</li>
+		  <li>Таким образом, если viewprofile&u=212, то номер значка персонажа будет №212.</li>
+		  </ul>
+        </div>
+        
+        <div class="tab-navigation">
+          <div></div> <!-- Пустой div для выравнивания -->
+          <button type="button" class="nav-btn next-tab" data-next="main">Начать заполнение</button>
+        </div>
+      </div>
+
+      <!-- Вкладка I. Основная -->
+      <div class="tab-content active" id="tab-main">
+        <label>Имя и фамилия офицера</label>
+        <input type="text" name="officer_name" required placeholder="John Doe">
+
+        <label>Номер жетона
+		<span class="form-hint">
+		<div class="tooltip">Чтобы ознакомиться с инструкцией по поиску жетона своего персонажа, см. вкладку "Информация"</div>
+		</span>
+		</label>
+        <input type="text" name="badge_number" required placeholder="123">
+
+        <label>Подразделение</label>
+        <select name="department" required>
+          <option value="">Выберите подразделение</option>
+          <option value="1">1-й Центральный патрульный дивизион</option>
+          <option value="1">Патрульная станция 77-й улицы</option>
+          <option value="1">18-я Юго-восточная общественная станция</option>
+          <option value="1">Дивизион Метрополитена</option>
+          <option value="1">Детективный Дивизион</option>
+        </select>
+
+        <label>Экипаж/Автомобиль</label>
+        <input type="text" name="crew_car" placeholder="1L00">
+
+        <label>Инкриминируемые нарушения
+  <span class="form-hint">
+    <div class="tooltip">Нарушения должны соответствовать действующему законодательству, соответственно, указывайте конкретные статьи для конкретизации характера нарушений (см. <a href="https://bw-p.ru/forums/legislation/">Законодательство СА)</a></div>
+  </span>
+</label>
+        <textarea name="charges" placeholder="Инкриминируемые нарушения"></textarea>
+
+        <label>Дата и время инцидента</label>
+        <input type="text" name="datetime" required placeholder="26/10/2011 — 14:30">
+
+        <label>Место происшествия</label>
+        <input type="text" name="location" required placeholder="Idlewood, Los Santos">
+        
+        <div class="tab-navigation">
+          <button type="button" class="nav-btn prev-tab" data-prev="info">Назад</button>
+          <button type="button" class="nav-btn next-tab" data-next="questions">Далее</button>
+        </div>
+      </div>
+
+      <!-- Вкладка II. Вопросы -->
+      <div class="tab-content" id="tab-questions">
+        <table class="participants-table">
+          <thead>
+            <tr>
+              <th>КОД</th>
+              <th>ИМЯ ФАМИЛИЯ</th>
+              <th>КОНТАКТНАЯ ИНФОРМАЦИЯ</th>
+            </tr>
+          </thead>
+          <tbody id="participants-tbody">
+            <!-- Участники будут добавляться динамически -->
+          </tbody>
+        </table>
+        
+        <button type="button" class="add-participant-btn" id="add-participant">+ Добавить участника</button>
+
+        <label>Описание инцидента</label>
+        <textarea name="description" placeholder="Подробно опишите события, произошедшие во время инцидента"></textarea>
+        
+        <div class="tab-navigation">
+          <button type="button" class="nav-btn prev-tab" data-prev="main">Назад</button>
+          <button type="button" class="nav-btn next-tab" data-next="ooc">Далее</button>
+        </div>
+      </div>
+
+      <!-- Вкладка III. OOC -->
+      <div class="tab-content" id="tab-ooc">
+        <label>Материалы дела (доказательства, ссылки, фото, видео)
+  <span class="form-hint">
+    <div class="tooltip">Прикрепляйте пояснение к каждому материалу дела. К примеру: https://es.bw-p.ru/lspd - Запись с видеорегистратора</div>
+  </span>
+</label>
+        <textarea name="evidence" placeholder="https://..."></textarea>
+        
+        <div class="tab-navigation">
+          <button type="button" class="nav-btn prev-tab" data-prev="questions">Назад</button>
+          <div></div> <!-- Пустой div для выравнивания -->
+        </div>
+      </div>
+
+      <div class="flex" style="margin-top:20px;flex-wrap:wrap;">
+        <button type="button" class="btn" id="generate">Сгенерировать отчёт</button>
+        <button type="button" class="btn secondary" id="copy">Копировать BB-код</button>
+        <button type="button" class="btn secondary" id="clear">Очистить форму</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h1>BB-код отчёта</h1>
+    <div id="preview" class="preview">После генерации здесь появится отчёт.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const form=document.getElementById('form');
+  const prev=document.getElementById('preview');
+  const themeToggle = document.getElementById('themeToggle');
+  const participantsTbody = document.getElementById('participants-tbody');
+  const addParticipantBtn = document.getElementById('add-participant');
+
+    // Управление таблицей участников
+  function addParticipantRow(code = '', name = '', contact = '') {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>
+        <select name="participant_code">
+          <option value="">Выберите код</option>
+          <option value="П" ${code === 'П' ? 'selected' : ''}>П - ПОДОЗРЕВАЕМЫЙ</option>
+		  <option value="Ж" ${code === 'Ж' ? 'selected' : ''}>Ж - ЖЕРТВА</option>
+          <option value="С" ${code === 'С' ? 'selected' : ''}>С - СВИДЕТЕЛЬ</option>
+          <option value="И" ${code === 'И' ? 'selected' : ''}>И - ИНФОРМАТОР</option>
+          <option value="З" ${code === 'З' ? 'selected' : ''}>З - ЗАЯВИТЕЛЬ</option>
+          
+        </select>
+      </td>
+      <td><input type="text" name="participant_name" value="${name}" placeholder="Имя Фамилия"></td>
+      <td><input type="text" name="participant_contact" value="${contact}" placeholder="Контактные данные"></td>
+      <td><button type="button" class="remove-participant-btn" style="background:transparent;border:none;color:var(--accent);cursor:pointer;font-size:14px;">✕</button></td>
+    `;
+    
+    // Добавляем обработчик удаления
+    const removeBtn = row.querySelector('.remove-participant-btn');
+    removeBtn.addEventListener('click', () => {
+      if (participantsTbody.children.length > 1) {
+        row.remove();
+      } else {
+        alert('Должна остаться хотя бы одна строка участников');
+      }
+    });
+    
+    participantsTbody.appendChild(row);
+  }
+  
+  addParticipantBtn.addEventListener('click', () => {
+    addParticipantRow();
+  });
+
+  // Добавляем первую строку по умолчанию
+  addParticipantRow();
+
+  // Управление вкладками
+  function switchTab(tabName) {
+    // Скрыть все вкладки
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    
+    // Убрать активный класс со всех кнопок вкладок
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    
+    // Показать выбранную вкладку
+    document.getElementById(`tab-${tabName}`).classList.add('active');
+    
+    // Активировать соответствующую кнопку
+    document.querySelector(`.tab[data-tab="${tabName}"]`).classList.add('active');
+    
+    // Сохранить текущую вкладку
+    localStorage.setItem('pd_current_tab', tabName);
+  }
+
+  // Инициализация вкладок
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      switchTab(this.getAttribute('data-tab'));
+    });
+  });
+
+  // Навигация между вкладками
+  document.querySelectorAll('.next-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      switchTab(this.getAttribute('data-next'));
+    });
+  });
+
+  document.querySelectorAll('.prev-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      switchTab(this.getAttribute('data-prev'));
+    });
+  });
+
+  function genBB(data){
+    // Функция для сбора данных участников из таблицы
+    function getParticipantsData() {
+      const codes = Array.from(document.querySelectorAll('select[name="participant_code"]')).map(select => select.value || 'С');
+      const names = Array.from(document.querySelectorAll('input[name="participant_name"]')).map(input => input.value || 'N/A');
+      const contacts = Array.from(document.querySelectorAll('input[name="participant_contact"]')).map(input => input.value || 'N/A');
+      
+      return { codes, names, contacts };
+    }
+
+    // Функция для форматирования участников в BB-код
+    function formatParticipantsTable() {
+      const participants = getParticipantsData();
+      let result = '';
+      
+      // Всегда выводим минимум 4 строки
+      const rowCount = Math.max(participants.codes.length, 4);
+      
+      for (let i = 0; i < rowCount; i++) {
+        const code = participants.codes[i] || 'С';
+        const name = participants.names[i] || 'N/A';
+        const contact = participants.contacts[i] || 'N/A';
+        
+        result += `[tr][td]${code}[/td][td]${name}[/td][td]${contact}[/td][/tr]\n`;
+      }
+      
+      return result;
+    }
+
+    return `[textarea][head]Lucius Bertram[/head]
+
+[center][b][size=125]INCIDENT REPORT[/size][/b][/center]
+
+[hr][/hr]
+
+[tab=100][tr][td][b]ОТ ОФИЦЕРА[/b][/td][td][b]# СОТРУДНИКА[/b][/td][td][b]ОТДЕЛ[/b][/td][td][b]ЭКИПАЖ/АВТОМОБИЛЬ #[/b][/td]
+[/tr][tr][td]${data.officer_name||''}[/td][td]#${data.badge_number||''}[/td][td]${data.department||''}[/td][td]${data.crew_car||''}[/td][/tr][/tab]
+
+[tab=100][tr][td][b]ЛОКАЦИЯ ИНЦИДЕНТА[/b][/td][td][b]ДАТА, ВРЕМЯ, ДЕНЬ[/b][/td][td][b]ОБВИНЕНИЯ[/b][/td][/tr][tr][td]${data.location||''}[/td][td]${data.datetime||''}[/td][td]${data.charges||''}[/td][/tr][/tab]
+
+[hr][/hr]
+
+[center][b]ИНФОРМАЦИЯ ОБ УЧАСТНИКАХ[/b]
+Заполнить информацию о пострадавших или подозреваемых, которые были вовлечены в инцидент, если они были идентифицированы.[/center]
+
+[center]КОДЫ: Ж - ЖЕРТВА — С - СВИДЕТЕЛЬ — И - ИНФОРМАТОР — З - ЗАЯВИТЕЛЬ — П - ПОДОЗРЕВАЕМЫЙ[/center]
+
+
+[tab=100][tr][td][b]КОД[/b][/td][td][b]ИМЯ ФАМИЛИЯ[/b][/td][td][b]КОНТАКТНАЯ ИНФОРМАЦИЯ[/b][/td][/tr]
+${formatParticipantsTable()}[/tab]
+
+[hr][/hr]
+
+[center][b]ПОВЕСТВОВАНИЕ[/b]
+Заполнить историю от начала до вашего уезда. Описать все действия предпринятые вами.[/center]
+
+[box]${data.description||''}[/box]
+
+[center][b]УЛИКИ[/b]
+Записать все нелегальные вещи, которые были найдены[/center]
+
+[box]${data.evidence||''}[/box][/textarea]`;
+  }
+
+  document.getElementById('generate').onclick=()=>{
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Собираем данные участников отдельно
+    const participantsData = {
+      codes: Array.from(document.querySelectorAll('select[name="participant_code"]')).map(select => select.value),
+      names: Array.from(document.querySelectorAll('input[name="participant_name"]')).map(input => input.value),
+      contacts: Array.from(document.querySelectorAll('input[name="participant_contact"]')).map(input => input.value)
+    };
+    
+    // Сохраняем данные участников в общий объект
+    data.participants = participantsData;
+    
+    const bb=genBB(data);
+    prev.textContent=bb;
+    localStorage.setItem('pd_report_data',JSON.stringify(data));
+    localStorage.setItem('pd_report_bb',bb);
+  };
+
+  document.getElementById('copy').onclick=()=>{
+  navigator.clipboard.writeText(prev.textContent||'').then(() => {
+    // Создаем уведомление
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = 'BB-код скопирован!';
+    
+    // Добавляем таймер
+    const timer = document.createElement('div');
+    timer.className = 'notification-timer';
+    notification.appendChild(timer);
+    
+    document.body.appendChild(notification);
+    
+    // Удаляем уведомление через 5 секунд
+    setTimeout(() => {
+      notification.remove();
+    }, 5000);
+  }).catch(err => {
+    alert('Не удалось скопировать BB-код');
+  });
+};
+
+  document.getElementById('clear').onclick=()=>{
+    if(!confirm('Очистить форму?'))return;
+    form.reset();
+    participantsTbody.innerHTML = '';
+    addParticipantRow(); // Добавляем первую строку обратно
+    prev.textContent='После генерации здесь появится отчёт.';
+    localStorage.removeItem('pd_report_data');
+    localStorage.removeItem('pd_current_tab');
+    switchTab('info'); // Вернуться на информационную вкладку
+  };
+
+  // сохранение и загрузка
+  const saved=localStorage.getItem('pd_report_data');
+  if(saved){
+    const data=JSON.parse(saved);
+    
+    // Заполняем основные поля
+    for(const k in data){
+      if(form[k] && k !== 'participants') {
+        form[k].value = data[k];
+      }
+    }
+    
+    // Заполняем таблицу участников
+    if(data.participants) {
+      participantsTbody.innerHTML = '';
+      const participants = data.participants;
+      const count = Math.max(participants.codes.length, 1);
+      
+      for(let i = 0; i < count; i++) {
+        addParticipantRow(
+          participants.codes[i] || '',
+          participants.names[i] || '',
+          participants.contacts[i] || ''
+        );
+      }
+    }
+    
+    const bb=localStorage.getItem('pd_report_bb');
+    if(bb)prev.textContent=bb;
+  }
+
+  // Восстановить последнюю активную вкладку
+  const currentTab = localStorage.getItem('pd_current_tab') || 'info';
+  switchTab(currentTab);
+
+  // Переключение темы
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? 'Светлая' : 'Тёмная';
+    localStorage.setItem('pd_theme', newTheme);
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+
+  // Инициализация темы
+  const savedTheme = localStorage.getItem('pd_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeToggle.textContent = savedTheme === 'dark' ? 'Светлая' : 'Тёмная';
+})();
+</script>
+</body>
+</html>
